@@ -38,8 +38,6 @@ ul, ol {
     max-width: 428px;
     margin: 0 auto;
     padding: 0 16px;
-
-    outline: 2px solid red;
 }
 
 @media screen and (min-width: 768px) {
@@ -71,6 +69,7 @@ ul, ol {
 .header-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
@@ -119,7 +118,6 @@ ul, ol {
     text-transform: uppercase;
     cursor: pointer;
     color: var(--primery-brand-color);
-    margin-right: 249px;
 }
 
 @media screen and (min-width: 768px) {
@@ -247,7 +245,7 @@ body {
         rgba(46, 47, 66, 0.70),
         rgba(46, 47, 66, 0.70)
     ),
-    url(../images/hw1-sec1/people-office.jpg);
+    url(../images/hero/hero-mob-1x.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -255,6 +253,59 @@ body {
     margin-right: auto;
     margin-left: auto;
 }
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-section {
+        background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.70),
+        rgba(46, 47, 66, 0.70)
+    ),
+    url(../images/hero/hero-mob-2x.jpg);
+    }
+}
+
+@media only screen and (min-width: 429px) {
+  .hero-section {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.70),
+        rgba(46, 47, 66, 0.70)
+    ),
+    url(../images/hero/hero-tab-1x.jpg);
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-section {
+        background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.70),
+        rgba(46, 47, 66, 0.70)
+    ),
+    url(../images/hero/hero-tab-2x.jpg);
+    }
+}
+}
+
+@media only screen and (min-width: 769px) {
+    .hero-section {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.70),
+          rgba(46, 47, 66, 0.70)
+      ),
+      url(../images/hero/hero-desk-1x.jpg);
+    }
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .hero-section {
+            background-image: linear-gradient(
+            to bottom,
+            rgba(46, 47, 66, 0.70),
+            rgba(46, 47, 66, 0.70)
+        ),
+        url(../images/hero/hero-desk-2x.jpg);
+        }
+    }
+  }
 
 .hero-title {
     color: var(--white-background-color);
@@ -772,6 +823,8 @@ body {
 
 img {
 	display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /**
@@ -996,7 +1049,7 @@ flex-direction: column;
 
 
 .input-footer {
-    max-width: 398px;
+    width: 398px;
     height: 40px;
     font-family: var(--title-font);
 	color: var(--white-background-color);
@@ -1015,7 +1068,7 @@ flex-direction: column;
 
 @media only screen and (min-width: 768px) {
   .input-footer {
-    max-width: 264px;
+    width: 264px;
   }
 }
 
