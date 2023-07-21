@@ -543,8 +543,6 @@ body {
     gap: var(--indent);
     --items: 1;
     --indent: 72px;
- /* display: flex;
- gap: 24px; */
 }
 
 @media only screen and (min-width: 1158px) {
@@ -553,7 +551,6 @@ body {
     --indent: 24px;
   }
 }
-
 
 .team-item {
     width: calc((100% - var(--indent) * var(--items) - 1)) / var(--items);
@@ -706,14 +703,20 @@ body {
   |============================
 */
 .portfolio-main {
-    padding: 96px 0 120px 0;
+    padding: 48px;
 }
 
-.portfolio-page {
-    width: 1158px;
-    padding: 0 15px;
-    margin: 0 auto;
+@media only screen and (min-width: 768px) {
+  .portfolio-main {
+    padding: 64px 0 96px 0;
+  }
 }
+
+@media only screen and (min-width: 1158px) {
+    .portfolio-main {
+      padding: 100px 0 120px 0;
+    }
+  }
 
 .visually-hidden {
     position: absolute;
@@ -730,9 +733,17 @@ body {
 
 .button-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 48px;
     gap: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  .button-list {
     margin-bottom: 72px;
+    justify-content: center;
+  }
 }
 
 .filter-button {
@@ -767,16 +778,36 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-img {
+.portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
-    padding-bottom: 120px;
+    align-items: center;
+    gap: var(--indent);
+    --items: 1;
+    --indent: 48px;
 }
 
+@media only screen and (min-width: 768px) {
+  .portfolio-list {
+    --items: 2;
+    --indent: 24px;
+    row-gap: 72px;
+    padding-bottom: 96px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+    .portfolio-list {
+      --items: 3;
+      --indent: 24px;
+      row-gap: 48px;
+      padding-bottom: 120px;
+    }
+  }
+
+
 .portfolio-item {
-    width: calc((100% - 48px) / 3);
+    width: calc((100% - var(--indent) * var(--items) - 1)) / var(--items);
 }
 
 .portfolio-card {
@@ -826,6 +857,39 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+@media only screen and (min-width: 768px) {
+  .portfolio-img {
+    width: 356px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+    .portfolio-img {
+      width: 360px;
+    }
+  }
+
+.portfolio-title {
+    font-family: var(--title-font);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--modal-overlay-color);
+    margin-bottom: 8px;
+}
+
+.portfolio-text {
+    font-family: var(--title-font);
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--body-text-color);
+}
+
 
 /**
   |============================
